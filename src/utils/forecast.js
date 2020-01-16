@@ -9,7 +9,7 @@ const forecast = (latitude, longitude, callback) => {
             callback({error:'Please check api URL'})
 
         } else {
-            callback(body.daily.data[0].summary + ' Currently its ' + body.currently.temperature + ' Degree out there with ' + body.currently.precipProbability + '% of rain')
+            callback(body.daily.data[0].summary + ' Currently its ' + body.currently.temperature + ' Degree out there with ' + body.currently.precipProbability + '% chance of rain. Humidity is '+ body.currently.humidity+'%')
 
         }
     })
